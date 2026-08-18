@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritika Malik — IT Support Specialist</title>
+<meta name="description" content="Portfolio of Ritika Malik, an entry-level IT Support Specialist in Calgary, AB — Windows, Microsoft 365 &amp; MFA troubleshooting, networking, and service desk support.">
+<meta name="theme-color" content="#0d1226">
+<meta property="og:title" content="Ritika Malik — IT Support Specialist">
+<meta property="og:description" content="Entry-level IT Support Specialist with hands-on experience in Windows, Microsoft 365/MFA, and service desk support.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f4bff'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ERM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12141c;
+    --ink-2:#4b5163;
+    --ink-3:#767c8c;
+    --bg:#f6f7fb;
+    --surface:#ffffff;
+    --line:#e6e8f0;
+    --brand:#3654ff;
+    --brand-ink:#1d3ad6;
+    --brand-soft:#eaedff;
+    --accent:#0fb3a8;
+    --accent-soft:#e3f8f6;
+    --hero-bg:#0b0f22;
+    --hero-bg-2:#131a3a;
+    --hero-text:#eef0ff;
+    --hero-text-dim:#a9adc9;
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:22px;
+    --shadow-sm:0 1px 2px rgba(18,20,28,.06), 0 1px 1px rgba(18,20,28,.04);
+    --shadow-md:0 12px 28px -12px rgba(18,20,28,.18);
+    --container:1120px;
+    --space-8:clamp(3rem, 2.4rem + 2.5vw, 5rem);
+    --space-9:clamp(4rem, 3rem + 4vw, 7rem);
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+  }
+  body{
+    margin:0;
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk','Inter',sans-serif;
+    color:var(--ink);
+    line-height:1.15;
+    margin:0;
+  }
+  p{ margin:0; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  img{ max-width:100%; display:block; }
+  svg{ display:block; flex-shrink:0; }
+  button{ font:inherit; }
+
+  .skip-link{
+    position:absolute; left:1rem; top:-4rem;
+    background:var(--brand); color:#fff; padding:.75rem 1.25rem;
+    border-radius:var(--radius-sm); z-index:1000; transition:top .2s ease;
+    font-weight:600;
+  }
+  .skip-link:focus{ top:1rem; }
+
+  .container{
+    width:100%;
+    max-width:var(--container);
+    margin-inline:auto;
+    padding-inline:clamp(1.25rem, 4vw, 2.5rem);
+  }
+
+  :focus-visible{ outline:2.5px solid var(--brand); outline-offset:3px; border-radius:4px; }
+
+  /* ---------- Header / Nav ---------- */
+  .site-header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(246,247,251,.78);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .25s ease, box-shadow .25s ease, background .25s ease;
+  }
+  .site-header.scrolled{
+    border-color:var(--line);
+    box-shadow:0 6px 20px -14px rgba(18,20,28,.25);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-block:.9rem;
+  }
+  .logo{
+    display:flex; align-items:center; gap:.6rem;
+    font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.05rem;
+    letter-spacing:-.01em;
+  }
+  .logo-mark{
+    width:34px; height:34px; border-radius:9px;
+    background:linear-gradient(135deg,var(--brand),#7b8cff);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-size:.85rem; font-weight:700;
+    box-shadow:var(--shadow-sm);
+  }
+  .nav-links{
+    display:flex; align-items:center; gap:clamp(1rem,2vw,1.9rem);
+  }
+  .nav-links a:not(.btn){
+    font-size:.93rem; font-weight:500; color:var(--ink-2);
+    padding:.4rem .1rem; position:relative;
+    transition:color .2s ease;
+  }
+  .nav-links a:not(.btn)::after{
+    content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px;
+    background:var(--brand); border-radius:2px;
+    transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+  }
+  .nav-links a:not(.btn):hover{ color:var(--ink); }
+  .nav-links a:not(.btn).active{ color:var(--ink); }
+  .nav-links a:not(.btn).active::after{ transform:scaleX(1); }
+
+  .nav-actions{ display:flex; align-items:center; gap:.75rem; }
+  .nav-toggle{
+    display:none; align-items:center; justify-content:center;
+    width:40px; height:40px; border-radius:var(--radius-sm);
+    background:transparent; border:1px solid var(--line); cursor:pointer;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex; align-items:center; gap:.5rem;
+    padding:.7rem 1.25rem; border-radius:999px;
+    font-weight:600; font-size:.92rem; white-space:nowrap;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+    border:1px solid transparent; cursor:pointer;
+  }
+  .btn-primary{ background:var(--brand); color:#fff; box-shadow:0 10px 24px -10px rgba(54,84,255,.55); }
+  .btn-primary:hover{ background:var(--brand-ink); transform:translateY(-1px); }
+  .btn-ghost{ background:rgba(255,255,255,.06); color:var(--hero-text); border-color:rgba(255,255,255,.22); }
+  .btn-ghost:hover{ background:rgba(255,255,255,.14); transform:translateY(-1px); }
+  .btn-outline{ background:transparent; color:var(--ink); border-color:var(--line); }
+  .btn-outline:hover{ border-color:var(--brand); color:var(--brand-ink); transform:translateY(-1px); }
+  .btn-sm{ padding:.5rem .9rem; font-size:.85rem; }
+
+  .icon-btn{
+    width:40px; height:40px; border-radius:50%;
+    display:inline-flex; align-items:center; justify-content:center;
+    border:1px solid rgba(255,255,255,.22); color:var(--hero-text);
+    transition:background .2s ease, transform .18s ease, border-color .2s ease;
+  }
+  .icon-btn:hover{ background:rgba(255,255,255,.12); transform:translateY(-1px); }
+  .icon-btn.light{ border-color:var(--line); color:var(--ink-2); }
+  .icon-btn.light:hover{ background:var(--brand-soft); color:var(--brand-ink); border-color:var(--brand-soft); }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    background:radial-gradient(120% 140% at 15% 0%, var(--hero-bg-2) 0%, var(--hero-bg) 55%);
+    color:var(--hero-text);
+    padding-top:clamp(3.5rem, 4vw + 2rem, 6rem);
+    padding-bottom:clamp(3.5rem, 4vw + 2rem, 6rem);
+  }
+  .hero::before{
+    content:'';
+    position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.14) 1px, transparent 1px);
+    background-size:26px 26px;
+    -webkit-mask-image:radial-gradient(70% 60% at 30% 20%, black, transparent);
+    mask-image:radial-gradient(70% 60% at 30% 20%, black, transparent);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:'';
+    position:absolute; width:520px; height:520px; right:-160px; top:-160px;
+    background:radial-gradient(closest-side, rgba(54,84,255,.35), transparent);
+    filter:blur(10px); pointer-events:none;
+  }
+  .hero-inner{ position:relative; z-index:1; max-width:760px; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:.5rem;
+    font-size:.8rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--hero-text-dim);
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14);
+    padding:.4rem .8rem; border-radius:999px; margin-bottom:1.25rem;
+  }
+  .eyebrow .dot{ width:6px; height:6px; border-radius:50%; background:#3ee6a8; box-shadow:0 0 0 3px rgba(62,230,168,.25); }
+  .hero h1{
+    font-size:clamp(2.4rem, 1.9rem + 2.2vw, 3.8rem);
+    font-weight:700; letter-spacing:-.02em; color:#fff;
+    margin-bottom:.9rem;
+  }
+  .hero-role{
+    font-size:clamp(1.05rem,1rem + .4vw,1.35rem);
+    color:#c7cdfd; font-weight:600; margin-bottom:1.1rem;
+  }
+  .hero-desc{
+    font-size:clamp(1rem,.96rem + .2vw,1.1rem);
+    color:var(--hero-text-dim); max-width:58ch; margin-bottom:2rem;
+  }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:.85rem; margin-bottom:2.25rem; }
+  .hero-social{ display:flex; gap:.7rem; }
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:1.5rem;
+    margin-top:2.5rem; padding-top:1.75rem;
+    border-top:1px solid rgba(255,255,255,.14);
+  }
+  .hero-meta-item{ display:flex; align-items:center; gap:.55rem; color:var(--hero-text-dim); font-size:.92rem; }
+  .hero-meta-item svg{ color:#7b8cff; }
+  .hero-meta-item a{ color:var(--hero-text-dim); transition:color .2s ease; }
+  .hero-meta-item a:hover{ color:#fff; }
+
+  /* ---------- Stat strip ---------- */
+  .stats{
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:1px; background:var(--line);
+    border:1px solid var(--line); border-radius:var(--radius-lg);
+    overflow:hidden; margin-top:-2.75rem; position:relative; z-index:2;
+    box-shadow:var(--shadow-md);
+  }
+  .stat{ background:var(--surface); padding:1.6rem 1.25rem; text-align:center; }
+  .stat-num{ font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(1.5rem,1.2rem + 1vw,2.1rem); color:var(--brand-ink); }
+  .stat-label{ font-size:.85rem; color:var(--ink-3); margin-top:.35rem; }
+
+  /* ---------- Section scaffolding ---------- */
+  section{ padding-block:var(--space-9); }
+  .section-head{ max-width:640px; margin-bottom:clamp(2rem,1.6rem + 1.5vw,3rem); }
+  .kicker{
+    display:inline-block; font-size:.8rem; font-weight:700; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--brand-ink); margin-bottom:.6rem;
+  }
+  .section-head h2{ font-size:clamp(1.7rem,1.5rem + 1vw,2.35rem); letter-spacing:-.015em; margin-bottom:.75rem; }
+  .section-head p{ color:var(--ink-2); font-size:1.02rem; }
+
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in-view{ opacity:1; transform:none; }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(2rem,4vw,3.5rem); align-items:start; }
+  .about-text p{ color:var(--ink-2); font-size:1.05rem; margin-bottom:1.1rem; }
+  .about-text p:last-child{ margin-bottom:0; }
+  .about-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:1.75rem; box-shadow:var(--shadow-sm);
+  }
+  .about-card h3{ font-size:1.05rem; margin-bottom:1rem; }
+  .about-list li{
+    display:flex; gap:.7rem; align-items:flex-start;
+    font-size:.94rem; color:var(--ink-2); padding-block:.5rem;
+    border-top:1px solid var(--line);
+  }
+  .about-list li:first-child{ border-top:none; }
+  .about-list svg{ color:var(--accent); margin-top:.15rem; }
+
+  /* ---------- Skills ---------- */
+  .skills-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+  .skill-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:1.6rem; box-shadow:var(--shadow-sm);
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .skill-card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:#d8ddf5; }
+  .skill-card-head{ display:flex; align-items:center; gap:.65rem; margin-bottom:1.1rem; }
+  .skill-icon{
+    width:38px; height:38px; border-radius:10px; background:var(--brand-soft); color:var(--brand-ink);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .skill-card h3{ font-size:1rem; }
+  .tag-list{ display:flex; flex-wrap:wrap; gap:.5rem; }
+  .tag{
+    font-size:.82rem; font-weight:500; color:var(--ink-2);
+    background:var(--bg); border:1px solid var(--line);
+    padding:.38rem .7rem; border-radius:999px;
+  }
+
+  /* ---------- Experience ---------- */
+  .timeline{ display:flex; flex-direction:column; gap:1.5rem; }
+  .tl-item{
+    display:grid; grid-template-columns:auto 1fr; gap:1.5rem;
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:clamp(1.5rem,2vw,2.1rem); box-shadow:var(--shadow-sm);
+  }
+  .tl-marker{ display:flex; flex-direction:column; align-items:center; padding-top:.3rem; }
+  .tl-dot{ width:14px; height:14px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 4px var(--brand-soft); flex-shrink:0; }
+  .tl-line{ width:2px; flex:1; background:var(--line); margin-top:.4rem; }
+  .tl-item:last-child .tl-line{ display:none; }
+  .tl-head{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:.5rem 1rem; margin-bottom:.35rem; }
+  .tl-role{ font-size:1.12rem; font-weight:700; font-family:'Space Grotesk',sans-serif; }
+  .tl-org{ color:var(--brand-ink); font-weight:600; font-size:.98rem; }
+  .tl-date{
+    font-size:.82rem; font-weight:600; color:var(--ink-3);
+    background:var(--bg); border:1px solid var(--line); border-radius:999px;
+    padding:.3rem .7rem; white-space:nowrap; height:fit-content;
+  }
+  .tl-place{ color:var(--ink-3); font-size:.9rem; margin-bottom:1rem; }
+  .tl-bullets li{
+    position:relative; padding-left:1.3rem; color:var(--ink-2);
+    font-size:.96rem; margin-bottom:.6rem;
+  }
+  .tl-bullets li:last-child{ margin-bottom:0; }
+  .tl-bullets li::before{
+    content:''; position:absolute; left:0; top:.55em; width:6px; height:6px;
+    border-radius:50%; background:var(--accent);
+  }
+
+  /* ---------- Projects ---------- */
+  .project-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:clamp(1.75rem,2.5vw,2.5rem); box-shadow:var(--shadow-sm);
+    display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:start;
+  }
+  .project-body h3{ font-size:1.3rem; margin-bottom:.25rem; }
+  .project-meta{ color:var(--ink-3); font-size:.9rem; margin-bottom:1.1rem; }
+  .project-tags{ display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.3rem; }
+  .project-tags .tag{ background:var(--accent-soft); border-color:transparent; color:#0a8a81; font-weight:600; }
+  .project-side{ display:flex; flex-direction:column; align-items:flex-end; gap:.75rem; }
+
+  /* ---------- Education ---------- */
+  .edu-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem; }
+  .edu-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+    padding:1.75rem; box-shadow:var(--shadow-sm);
+    display:flex; gap:1.1rem;
+  }
+  .edu-icon{
+    width:46px; height:46px; border-radius:12px; background:var(--brand-soft); color:var(--brand-ink);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .edu-card h3{ font-size:1.02rem; margin-bottom:.3rem; }
+  .edu-org{ color:var(--ink-2); font-size:.94rem; margin-bottom:.4rem; }
+  .badge{
+    display:inline-flex; align-items:center; gap:.4rem;
+    font-size:.78rem; font-weight:700; color:var(--brand-ink);
+    background:var(--brand-soft); padding:.28rem .65rem; border-radius:999px;
+  }
+  .badge.progress{ color:#0a8a81; background:var(--accent-soft); }
+
+  /* ---------- Contact ---------- */
+  .contact{ background:var(--hero-bg); color:var(--hero-text); position:relative; overflow:hidden; }
+  .contact::before{
+    content:''; position:absolute; inset:0;
+    background-image:radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px);
+    background-size:26px 26px;
+    -webkit-mask-image:radial-gradient(65% 65% at 80% 30%, black, transparent);
+    mask-image:radial-gradient(65% 65% at 80% 30%, black, transparent);
+  }
+  .contact .section-head{ position:relative; z-index:1; }
+  .contact .section-head p{ color:var(--hero-text-dim); }
+  .contact .kicker{ color:#8fa0ff; }
+  .contact-grid{ position:relative; z-index:1; display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+  .contact-card{
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.14);
+    border-radius:var(--radius-lg); padding:1.5rem;
+    display:flex; flex-direction:column; gap:.9rem;
+    transition:background .2s ease, transform .2s ease, border-color .2s ease;
+  }
+  .contact-card:hover{ background:rgba(255,255,255,.09); transform:translateY(-3px); border-color:rgba(255,255,255,.28); }
+  .contact-card .icon-btn{ pointer-events:none; }
+  .contact-card-label{ font-size:.78rem; text-transform:uppercase; letter-spacing:.06em; color:var(--hero-text-dim); }
+  .contact-card-value{ font-weight:600; font-size:.98rem; word-break:break-word; }
+
+  /* ---------- Footer ---------- */
+  .site-footer{
+    padding-block:1.75rem; border-top:1px solid var(--line);
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem;
+  }
+  .site-footer p{ color:var(--ink-3); font-size:.86rem; }
+  .footer-links{ display:flex; gap:1.25rem; }
+  .footer-links a{ color:var(--ink-3); font-size:.86rem; transition:color .2s ease; }
+  .footer-links a:hover{ color:var(--brand-ink); }
+  .to-top{
+    display:inline-flex; align-items:center; gap:.4rem; color:var(--ink-2); font-size:.86rem; font-weight:600;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .about-grid{ grid-template-columns:1fr; }
+    .skills-grid{ grid-template-columns:repeat(2,1fr); }
+    .edu-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:repeat(2,1fr); }
+    .project-card{ grid-template-columns:1fr; }
+    .project-side{ align-items:flex-start; flex-direction:row; }
+  }
+  @media (max-width:760px){
+    .nav-links{
+      position:fixed; inset:64px 1rem auto 1rem; z-index:90;
+      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
+      flex-direction:column; align-items:stretch; padding:1rem;
+      box-shadow:var(--shadow-md);
+      transform:translateY(-12px); opacity:0; visibility:hidden; pointer-events:none;
+      transition:transform .22s ease, opacity .22s ease, visibility .22s;
+    }
+    .nav-links.open{ transform:translateY(0); opacity:1; visibility:visible; pointer-events:auto; }
+    .nav-links a:not(.btn){ padding:.85rem .5rem; border-bottom:1px solid var(--line); }
+    .nav-links a:not(.btn):last-of-type{ border-bottom:none; }
+    .nav-links a:not(.btn)::after{ display:none; }
+    .nav-toggle{ display:inline-flex; }
+    .stats{ grid-template-columns:1fr; margin-top:2rem; }
+    .skills-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+  }
+
+  @media print{
+    .site-header, .hero-ctas, .hero-social, .site-footer, .nav-toggle{ display:none !important; }
+    section{ padding-block:1.5rem; }
+    body{ background:#fff; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container nav">
+    <a class="logo" href="#top">
+      <span class="logo-mark">RM</span>
+      <span>Ritika Malik</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-primary btn-sm" href="Ritika-Malik-Resume.pdf" target="_blank" rel="noopener">
+        Résumé
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <svg id="iconMenu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="iconClose" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ---------- Hero ---------- -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <span class="eyebrow"><span class="dot"></span> Open to entry-level IT support roles</span>
+      <h1>Ritika Malik</h1>
+      <p class="hero-role">IT Support Specialist</p>
+      <p class="hero-desc">
+        I resolve Windows login failures, Microsoft&nbsp;365 &amp; MFA access issues, and account/permissions
+        problems — backed by a Software Development Diploma and three years of high‑pressure,
+        customer‑facing experience that transfers directly to service desk triage.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="Ritika-Malik-Resume.pdf" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Résumé
+        </a>
+        <a class="btn btn-ghost" href="mailto:ritikamalik1717@gmail.com">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6Z"/><path d="m22 6-10 7L2 6"/></svg>
+          Email Me
+        </a>
+        <div class="hero-social">
+          <a class="icon-btn" href="https://www.linkedin.com/in/ritikamalik1717" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+          <a class="icon-btn" href="https://github.com/ritika17github" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Calgary, Alberta
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+15879739416">587-973-9416</a>
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6Z"/><path d="m22 6-10 7L2 6"/></svg>
+          <a href="mailto:ritikamalik1717@gmail.com">ritikamalik1717@gmail.com</a>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat">
+        <div class="stat-num">15–20</div>
+        <div class="stat-label">Support tickets triaged / week</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3.5 GPA</div>
+        <div class="stat-label">Software Development Diploma, SAIT</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3+ yrs</div>
+        <div class="stat-label">Customer-facing, high-pressure experience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- About ---------- -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="kicker">About</span>
+          <h2 style="margin-bottom:1.25rem;">A calm, thorough first point of contact</h2>
+          <p>
+            I'm an entry-level IT Support Specialist with hands-on experience resolving Windows login failures,
+            Microsoft 365 and MFA access issues, and account/permissions problems — backed by a Software
+            Development Diploma (SAIT, 3.5 GPA) and progress toward the Google IT Support Professional Certificate.
+          </p>
+          <p>
+            As an IT Support Volunteer, I handled 15–20 first-line tickets a week, keeping documentation
+            consistent enough for clean escalation. Before that, I spent three years in high-pressure,
+            customer-facing roles — training staff, following SOPs, and communicating clearly with
+            non-technical people — skills that translate directly to service desk triage and support.
+          </p>
+        </div>
+        <div class="about-card reveal">
+          <h3>What I bring to a service desk</h3>
+          <ul class="about-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Clear, consistent ticket documentation built for escalation
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Comfortable in Agile-style workflows with daily prioritization
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Practiced at translating technical issues for non-technical people
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Steady under pressure — three years in fast-paced, live-service roles
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Skills ---------- -->
+  <section id="skills" style="background:var(--surface); border-block:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Technical Skills</span>
+        <h2>Tools &amp; technologies I work with</h2>
+        <p>A working toolkit for account access, device support, and network-level triage.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <span class="skill-icon">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </span>
+            <h3>Systems &amp; Directory</h3>
+          </div>
+          <div class="tag-list">
+            <span class="tag">Windows 10/11</span><span class="tag">macOS</span>
+            <span class="tag">Microsoft 365</span><span class="tag">Outlook</span>
+            <span class="tag">Teams</span><span class="tag">OneDrive</span>
+            <span class="tag">SharePoint</span><span class="tag">Active Directory</span>
+            <span class="tag">Microsoft Entra ID (Azure AD)</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <span class="skill-icon">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M12 2a10 10 0 0 1 7.07 17.07M12 2a10 10 0 0 0-7.07 17.07M12 2v6m0 8v6m10-10h-6M8 12H2"/></svg>
+            </span>
+            <h3>Networking</h3>
+          </div>
+          <div class="tag-list">
+            <span class="tag">TCP/IP</span><span class="tag">DNS</span>
+            <span class="tag">DHCP</span><span class="tag">Wi-Fi</span>
+            <span class="tag">VPN Troubleshooting</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <span class="skill-icon">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </span>
+            <h3>Support Tools</h3>
+          </div>
+          <div class="tag-list">
+            <span class="tag">ServiceNow</span><span class="tag">Jira</span>
+            <span class="tag">Azure DevOps</span><span class="tag">Remote Desktop (RDP)</span>
+            <span class="tag">Ticketing &amp; Incident Docs</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <span class="skill-icon">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="16" r="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </span>
+            <h3>Support Tasks</h3>
+          </div>
+          <div class="tag-list">
+            <span class="tag">Password Resets</span><span class="tag">MFA Troubleshooting</span>
+            <span class="tag">Account Provisioning</span><span class="tag">Permissions Validation</span>
+            <span class="tag">Hardware/Peripheral Support</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-head">
+            <span class="skill-icon">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            <h3>Languages &amp; Other</h3>
+          </div>
+          <div class="tag-list">
+            <span class="tag">Python</span><span class="tag">SQL</span>
+            <span class="tag">Git/GitHub</span><span class="tag">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Experience ---------- -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Experience</span>
+        <h2>Where I've put it into practice</h2>
+        <p>First-line IT support experience, plus leadership roles that built the same triage instincts.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">IT Support Volunteer</div>
+                <div class="tl-org">SAIT IT Services</div>
+              </div>
+              <span class="tl-date">May 2024 – Aug 2024</span>
+            </div>
+            <div class="tl-place">Calgary, AB</div>
+            <ul class="tl-bullets">
+              <li>Resolved Windows login failures, MFA issues, and Microsoft 365 access problems for students and staff via walk-up, email, and chat.</li>
+              <li>Validated user account setups, permissions, and access levels; performed password resets and account unlocks.</li>
+              <li>Diagnosed and documented connectivity issues (Wi-Fi, VPN, DNS) for escalation, maintaining consistent documentation quality.</li>
+              <li>Supported device setup and troubleshooting for laptops, printers, and peripherals across Windows/macOS.</li>
+              <li>Handled 15–20 user issues per week during peak periods in an Agile-style workflow with daily prioritization.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"><span class="tl-dot" style="background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft);"></span></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">Assistant Kitchen Manager / Line Cook</div>
+                <div class="tl-org">The Canadian Brewhouse &amp; Cactus Club Cafe</div>
+              </div>
+              <span class="tl-date">Jun 2023 – Jun 2026</span>
+            </div>
+            <div class="tl-place">Calgary, AB · Leadership &amp; transferable experience</div>
+            <ul class="tl-bullets">
+              <li>Acted as first escalation point for a team, triaging issues by urgency and coordinating resolution — the same prioritization model used in ticket queues.</li>
+              <li>Trained and onboarded 20 employees on tools and procedures; rebuilt shift documentation, cutting recurring errors by 18%.</li>
+              <li>Directed daily coordination for teams of 15–30, improving workflow efficiency by 12% through better resource allocation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Projects ---------- -->
+  <section id="projects" style="background:var(--surface); border-block:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Projects</span>
+        <h2>Something I built end to end</h2>
+        <p>Applying the same documentation and debugging discipline to shipped code.</p>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-body">
+          <h3>Yemeni Village — Restaurant Website &amp; Reservations</h3>
+          <p class="project-meta">Software Developer · Capstone Project · Calgary, AB · May 2024 – Aug 2024</p>
+          <div class="project-tags">
+            <span class="tag">React</span><span class="tag">Firebase</span>
+            <span class="tag">GitHub</span><span class="tag">Vercel</span>
+          </div>
+          <ul class="tl-bullets">
+            <li>Built and deployed a responsive restaurant website with live online reservations using React, Firebase, GitHub, and Vercel.</li>
+            <li>Diagnosed and resolved front-end, integration, and deployment defects through systematic debugging and testing.</li>
+            <li>Documented technical decisions throughout the project — the same documentation discipline used in incident logs and knowledge-base articles.</li>
+          </ul>
+        </div>
+        <div class="project-side">
+          <a class="icon-btn light" href="https://github.com/ritika17github" target="_blank" rel="noopener" aria-label="View GitHub profile">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Education ---------- -->
+  <section id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Education &amp; Certifications</span>
+        <h2>Formal training behind the hands-on work</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <span class="edu-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.1 2.69 2 6 2s6-.9 6-2v-5"/></svg>
+          </span>
+          <div>
+            <h3>Software Development Diploma</h3>
+            <p class="edu-org">SAIT, Calgary, AB · 2024</p>
+            <span class="badge">GPA 3.5</span>
+          </div>
+        </div>
+
+        <div class="edu-card reveal">
+          <span class="edu-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+          </span>
+          <div>
+            <h3>Google IT Support Professional Certificate</h3>
+            <p class="edu-org">Coursera · 2026</p>
+            <span class="badge progress">In Progress</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Contact ---------- -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">Contact</span>
+        <h2 style="color:#fff;">Let's talk about your team's service desk</h2>
+        <p>Open to entry-level IT support and service desk roles in Calgary and remote. I'll usually reply within a day.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="mailto:ritikamalik1717@gmail.com">
+          <span class="icon-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6c0-1.1-.9-2-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2V6Z"/><path d="m22 6-10 7L2 6"/></svg>
+          </span>
+          <span class="contact-card-label">Email</span>
+          <span class="contact-card-value">ritikamalik1717@gmail.com</span>
+        </a>
+
+        <a class="contact-card reveal" href="tel:+15879739416">
+          <span class="icon-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <span class="contact-card-label">Phone</span>
+          <span class="contact-card-value">587-973-9416</span>
+        </a>
+
+        <a class="contact-card reveal" href="https://www.linkedin.com/in/ritikamalik1717" target="_blank" rel="noopener">
+          <span class="icon-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </span>
+          <span class="contact-card-label">LinkedIn</span>
+          <span class="contact-card-value">/in/ritikamalik1717</span>
+        </a>
+
+        <a class="contact-card reveal" href="https://github.com/ritika17github" target="_blank" rel="noopener">
+          <span class="icon-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </span>
+          <span class="contact-card-label">GitHub</span>
+          <span class="contact-card-value">ritika17github</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem;">
+    <p>© <span id="year"></span> Ritika Malik. Built by hand, one ticket at a time.</p>
+    <div class="footer-links">
+      <a href="mailto:ritikamalik1717@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/ritikamalik1717" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/ritika17github" target="_blank" rel="noopener">GitHub</a>
+      <a class="to-top" href="#top">↑ Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var header = document.getElementById('siteHeader');
+  var navLinks = document.getElementById('navLinks');
+  var navToggle = document.getElementById('navToggle');
+  var iconMenu = document.getElementById('iconMenu');
+  var iconClose = document.getElementById('iconClose');
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Header shadow on scroll
+  function onScroll(){
+    if (window.scrollY > 8) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Mobile nav toggle
+  function closeNav(){
+    navLinks.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    iconMenu.style.display = '';
+    iconClose.style.display = 'none';
+  }
+  function openNav(){
+    navLinks.classList.add('open');
+    navToggle.setAttribute('aria-expanded', 'true');
+    iconMenu.style.display = 'none';
+    iconClose.style.display = '';
+  }
+  navToggle.addEventListener('click', function(){
+    var isOpen = navLinks.classList.contains('open');
+    if (isOpen) closeNav(); else openNav();
+  });
+  navLinks.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', closeNav);
+  });
+
+  // Scroll-spy active nav link
+  var sections = ['about','skills','experience','projects','education','contact']
+    .map(function(id){ return document.getElementById(id); })
+    .filter(Boolean);
+  var navAnchors = Array.prototype.slice.call(navLinks.querySelectorAll('a[href^="#"]'));
+
+  if ('IntersectionObserver' in window && sections.length){
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          var id = entry.target.id;
+          navAnchors.forEach(function(a){
+            a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function(s){ spy.observe(s); });
+  }
+
+  // Reveal on scroll
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length){
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          ro.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function(el){ ro.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+})();
+</script>
+</body>
+</html>

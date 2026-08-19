@@ -313,6 +313,7 @@
   }
 
   /* ---------- Projects ---------- */
+  .projects-list{ display:flex; flex-direction:column; gap:1.5rem; }
   .project-card{
     background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-lg);
     padding:clamp(1.75rem,2.5vw,2.5rem); box-shadow:var(--shadow-sm);
@@ -606,7 +607,7 @@
           <div class="tag-list">
             <span class="tag">ServiceNow</span><span class="tag">Jira</span>
             <span class="tag">Azure DevOps</span><span class="tag">Remote Desktop (RDP)</span>
-            <span class="tag">Ticketing &amp; Incident Docs</span>
+            <span class="tag">Ticketing &amp; Incident Docs</span><span class="tag">IT Service Management (ITSM)</span>
           </div>
         </div>
 
@@ -634,6 +635,8 @@
           <div class="tag-list">
             <span class="tag">Python</span><span class="tag">SQL</span>
             <span class="tag">Git/GitHub</span><span class="tag">REST APIs</span>
+            <span class="tag">React</span><span class="tag">Firebase</span>
+            <span class="tag">Software Testing</span>
           </div>
         </div>
       </div>
@@ -672,20 +675,54 @@
         </div>
 
         <div class="tl-item reveal">
+          <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">Prep Cook</div>
+                <div class="tl-org">Moxies</div>
+              </div>
+              <span class="tl-date">May 2026 – Present</span>
+            </div>
+            <div class="tl-place">Calgary, AB</div>
+            <ul class="tl-bullets">
+              <li>Diagnosed and resolved recurring workflow bottlenecks across multiple stations, contributing to a 25% improvement in operational efficiency during peak periods.</li>
+              <li>Maintained clear shift notes and handoff documentation, shortening issue-resolution time and improving consistency between teams — the same handoff discipline used in shift-based service desks.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-marker"><span class="tl-dot"></span><span class="tl-line"></span></div>
+          <div class="tl-content">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">Line Cook</div>
+                <div class="tl-org">Cactus Club Cafe</div>
+              </div>
+              <span class="tl-date">Jan 2025 – Jun 2026</span>
+            </div>
+            <div class="tl-place">Calgary, AB</div>
+            <ul class="tl-bullets">
+              <li>Coordinated real-time priorities and status updates across a 20–30 person team during high-volume service, keeping stakeholders informed without disrupting workflow.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
           <div class="tl-marker"><span class="tl-dot" style="background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft);"></span></div>
           <div class="tl-content">
             <div class="tl-head">
               <div>
-                <div class="tl-role">Assistant Kitchen Manager / Line Cook</div>
-                <div class="tl-org">The Canadian Brewhouse &amp; Cactus Club Cafe</div>
+                <div class="tl-role">Line Cook / Assistant Kitchen Manager</div>
+                <div class="tl-org">The Canadian Brewhouse</div>
               </div>
-              <span class="tl-date">Jun 2023 – Jun 2026</span>
+              <span class="tl-date">Jun 2023 – Jan 2025</span>
             </div>
-            <div class="tl-place">Calgary, AB · Leadership &amp; transferable experience</div>
+            <div class="tl-place">Calgary, AB</div>
             <ul class="tl-bullets">
-              <li>Acted as first escalation point for a team, triaging issues by urgency and coordinating resolution — the same prioritization model used in ticket queues.</li>
               <li>Trained and onboarded 20 employees on tools and procedures; rebuilt shift documentation, cutting recurring errors by 18%.</li>
-              <li>Directed daily coordination for teams of 15–30, improving workflow efficiency by 12% through better resource allocation.</li>
+              <li>Acted as first escalation point for a team, triaging issues by urgency and coordinating resolution — the same prioritization model used in ticket queues.</li>
             </ul>
           </div>
         </div>
@@ -702,24 +739,48 @@
         <p>Applying the same documentation and debugging discipline to shipped code.</p>
       </div>
 
-      <div class="project-card reveal">
-        <div class="project-body">
-          <h3>Yemeni Village — Restaurant Website &amp; Reservations</h3>
-          <p class="project-meta">Software Developer · Capstone Project · Calgary, AB · May 2024 – Aug 2024</p>
-          <div class="project-tags">
-            <span class="tag">React</span><span class="tag">Firebase</span>
-            <span class="tag">GitHub</span><span class="tag">Vercel</span>
+      <div class="projects-list">
+        <div class="project-card reveal">
+          <div class="project-body">
+            <h3>Restaurant Operations Dashboard</h3>
+            <p class="project-meta">Software Developer · Personal Project · Calgary, AB · 2026</p>
+            <div class="project-tags">
+              <span class="tag">Python</span><span class="tag">Flask</span>
+              <span class="tag">React</span><span class="tag">SQLite</span>
+              <span class="tag">Chart.js</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built and deployed a full-stack operations dashboard (Python, Flask, React, SQLite, Chart.js) to centralize inventory, prep, task, and scheduling data behind a REST API.</li>
+              <li>Identified and remediated an exposed database credential, migrating the app to a self-contained local database — the same security-conscious triage expected on a service desk.</li>
+              <li>Diagnosed and fixed cross-stack integration defects (API connectivity, dependency versions, database schema) through systematic debugging, and documented the architecture, API, and schema for maintainability.</li>
+            </ul>
           </div>
-          <ul class="tl-bullets">
-            <li>Built and deployed a responsive restaurant website with live online reservations using React, Firebase, GitHub, and Vercel.</li>
-            <li>Diagnosed and resolved front-end, integration, and deployment defects through systematic debugging and testing.</li>
-            <li>Documented technical decisions throughout the project — the same documentation discipline used in incident logs and knowledge-base articles.</li>
-          </ul>
+          <div class="project-side">
+            <a class="icon-btn light" href="https://github.com/ritika17github/Restaurant-Operations-Dashboard-Project" target="_blank" rel="noopener" aria-label="View GitHub repository">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="project-side">
-          <a class="icon-btn light" href="https://github.com/ritika17github" target="_blank" rel="noopener" aria-label="View GitHub profile">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-          </a>
+
+        <div class="project-card reveal">
+          <div class="project-body">
+            <h3>Yemeni Village — Restaurant Website &amp; Reservations</h3>
+            <p class="project-meta">Software Developer · Capstone Project · Calgary, AB · May 2024 – Aug 2024</p>
+            <div class="project-tags">
+              <span class="tag">React</span><span class="tag">Firebase</span>
+              <span class="tag">GitHub</span><span class="tag">Vercel</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built and deployed a responsive restaurant website with live online reservations using React, Firebase, GitHub, and Vercel.</li>
+              <li>Diagnosed and resolved front-end, integration, and deployment defects through systematic debugging and testing.</li>
+              <li>Documented technical decisions throughout the project — the same documentation discipline used in incident logs and knowledge-base articles.</li>
+            </ul>
+          </div>
+          <div class="project-side">
+            <a class="icon-btn light" href="https://github.com/ritika17github" target="_blank" rel="noopener" aria-label="View GitHub profile">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.9-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
